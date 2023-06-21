@@ -1,11 +1,17 @@
 /**
- * Adds together two numbers
- * @param a - the first number to add
- * @param b - the second number to add
- * @returns the total
+ * Makes the input string written in the CamelCase
+ * @param str - input string
+ * @returns string wirtten in the CamelCase
  */
-function sum(a: number, b: number): number {
-  return a + b;
+function camelCase(str: string): string {
+  const words = str.split(" ");
+  let camelCased = "";
+
+  for (let word of words) {
+    camelCased += word.substring(0, 1).toUpperCase() + word.substring(1, word.length).toLowerCase();
+  }
+
+  return camelCased;
 }
 
-export default sum;
+export default camelCase;

@@ -1,5 +1,8 @@
-import sum from "./skeleton";
+import camelCase from "./skeleton";
 
 test("sum adds two numbers", () => {
-  expect(sum(4, 3)).toBe(7);
+  expect(camelCase("")).toBe("");
+  expect(camelCase("lubie jesc placki")).toBe("LubieJescPlacki");
+  expect(camelCase("katakumby")).toBe("Katakumby");
+  expect(camelCase("potatoes are the best vegetables")).toBe("PotatoesAreTheBestVegetables");
 });
